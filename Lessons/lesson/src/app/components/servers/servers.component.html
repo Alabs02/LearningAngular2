@@ -1,0 +1,37 @@
+<div name="servers">
+  <div class="card bg-white shadow-sm p-4 w-100 mb-4">
+    <div class="w-100">
+      <div class="row w-100">
+        <div class="col-md-4 col-sm-12">
+          <label for="server-name" class="text-muted">Server Name</label>
+          <input [(ngModel)]="form.servername" type="text" class="form-control" id="server-name" placeholder="Server Name">
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <label for="server-status" class="text-muted">Server Status</label>
+          <select [(ngModel)]="form.serverstatus" class="form-control" id="server-status">
+            <option [value]="''" selected>Select Status</option>
+            <option value="online">Online</option>
+            <option value="offline">Offline</option>
+          </select>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <button (click)="addServer()" class="btn btn-primary w-100 mt-4">Add Server</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="servers.length >= 1; else noServer" class="row">
+    <div *ngFor="let server of servers" class="col-sm-12">
+      <server-component [server]="server"></server-component>
+    </div>
+  </div>
+  <ng-template #noServer>
+    <div>
+      <div class="alert alert-info">
+        <h5 class="alert-heading">No servers added yet!</h5>
+        <p>Add a server to get started.</p>
+      </div>
+    </div>
+  </ng-template>
+</div>

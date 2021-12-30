@@ -1,0 +1,11 @@
+<div name="server">
+  <div class="card shadow-sm border mb-3">
+    <div class="card-body d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center">
+        <svg class="card-icon card-icon--online mr-3" [class]="server.serverstatus === 'online' ? 'card-icon--online' : 'card-icon--offline'" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 5a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm14 1a1 1 0 11-2 0 1 1 0 012 0zM2 13a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2v-2zm14 1a1 1 0 11-2 0 1 1 0 012 0z" clip-rule="evenodd"></path></svg>
+        <h5 class="card-title text-muted m-0">{{ server.servername }}</h5>
+      </div>
+      <p class="m-0 text-uppercase card-action card-action--online" [class]="server.serverstatus === 'online' ? 'card-action--online' : 'card-action--offline'" [innerText]="server.serverstatus === 'online' ? 'online' : 'offline'">ONLINE</p>
+    </div>
+  </div>
+</div>

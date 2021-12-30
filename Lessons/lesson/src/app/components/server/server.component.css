@@ -1,0 +1,28 @@
+.card-icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+.card-icon--online {
+  fill: #4caf50;
+}
+
+.card-icon--offline {
+  fill: #f44336;
+}
+.mr-3 {
+  margin-right: 1.2rem;
+}
+
+.card-action {
+  font-size: 0.8rem;
+  letter-spacing: 0.8pt;
+}
+
+.card-action--online {
+  color: #4caf50;
+}
+
+.card-action--offline {
+  color: #f44336;
+}
